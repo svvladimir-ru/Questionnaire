@@ -67,10 +67,10 @@ class QuestionSerializer(serializers.Serializer):
 
 class PollSerializer(serializers.ModelSerializer):
     id = serializers.IntegerField(read_only=True)
-    poll_name = serializers.CharField(max_length=200)
+    name = serializers.CharField(max_length=200)
     pub_date = serializers.DateTimeField()
     end_date = serializers.DateTimeField()
-    poll_description = serializers.CharField(max_length=200)
+    description = serializers.CharField(max_length=200)
     questions = QuestionSerializer(many=True, read_only=True)
 
     class Meta:
