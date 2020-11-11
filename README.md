@@ -16,12 +16,17 @@ $ pip install -r requirements.txt
 $ python manage.py runserver
 ```
 
-Запуск через докер, если установлен
+Запуск через Docker, если установлен
 
 1. В корневой директории проекта создайте образ командой docker build -t <тут введите имя образа> .
 2. Запустите контейнер командой docker run -it -p 8000:8000 <имя образа>
 3. Приложение будет доступно в браузере по адресу http://localhost:8000/.
 
+
+Создать администратора для входа и создания опросов.
+$ python manage.py createsuper
+Если контейнер был запущен через Docker во втором окне терминала ввести:
+$ sudo docker exec -it <CONTAINER ID> python manage.py createsuperuser
 
 Так же для удобной работы лучше всего использовать [Postman](https://www.postman.com/downloads/)
 
