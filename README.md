@@ -24,8 +24,11 @@ $ python manage.py runserver
 
 
 Создать администратора для входа и создания опросов.
+
 $ python manage.py createsuper
+
 Если контейнер был запущен через Docker во втором окне терминала ввести:
+
 $ sudo docker exec -it <CONTAINER ID> python manage.py createsuperuser
 
 Так же для удобной работы лучше всего использовать [Postman](https://www.postman.com/downloads/)
